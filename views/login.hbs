@@ -1,0 +1,18 @@
+  {{#if loginFail}}
+            <div id="fail">
+                <h3>Login incorrect</h3>
+            </div>
+        {{/if}}
+<div id="center">
+    <div id="login-container">
+        <form type="GET" action="/login" id="ArtistDirectory">
+            <h3 id="login-header">Member Login</h3>
+            <hr id="break">
+            <div id="login-fields" class="container-flex">
+                <input id="username" name="username" placeholder="username">
+                <input type="password" id="password" name="password" placeholder="password">
+            </div>
+            <button id="login-button" type="submit">Login</button>
+        </form>
+    </div>
+</div>

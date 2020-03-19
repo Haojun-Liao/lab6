@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Home Page
+        </title>
+        <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+        <link href="../css/style.css" rel="stylesheet" type="text/css">
+        <script src="../js/script.js" defer></script>
+    </head>
+
+    <body>
+        <div class="container-flex">
+            <form id="logout" action="/" method="GET">
+                <button id="logout-button" type="submit">logout</button>
+            </form>
+
+            <form type="GET" action="/search" id="ArtistDirectory">
+                <h1>
+                    <b>Artist Directory</b>
+                </h1>
+                <input id="DirInput" type="text" name="search">
+                <button type="button" id="addArtist" onclick="displayArtistFields()">Add</button>
+                <button id="search">Search</button>
+            </form>
+
+            <form method="POST" action="http://localhost:3000/add" id="aFields" class="container-flex">
+                <input name="name" id="AName" placeholder="Artist Name" class="artistField" type="text">
+                <input name="about" id="AAbout" placeholder="About Artist" class="artistField" type="text">
+                <input name="image" id="AImage" placeholder="Image Url" class="artistField" type="text">
+                <button id="addFields" type="submit">Add</button>
+            </form>
+
+            <div id="ArtistBox" class="container-flex">
+                {{{body}}}
+            </div>
+        </div>
+    </body>
+</html>
